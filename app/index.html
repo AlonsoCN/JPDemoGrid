@@ -10,6 +10,7 @@
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../bower_components/materialize/bin/materialize.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -29,33 +30,75 @@
     <div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <!--1<li class="active"><a href="#">Home</a></li>-->
         </ul>
         <h3 class="text-muted">JP DemoGrid</h3>
       </div>
 
       <div id="grid-container">
         <div class="row">
-          <div class="input-field col s3">
-            <input id="first_name" type="text" class="validate">
-            <label for="first_name">Compañia</label>
-          </div>
-          <div class="input-field col s3">
-            <input id="last_name" type="text" class="validate">
-            <label for="last_name">Sala</label>
-          </div>
-          <div class="input-field col s3">
-            <input id="last_name" type="text" class="validate">
-            <label for="last_name">Fecha</label>
-          </div>
-          <div class="input-field col s3"></div>
+          <div class="col s4">
+            <label>Compañia</label>
+            <select class="browser-default">
+              <option value="" disabled selected>Elije una compañia</option>
+              <option value="1">Compañia 01</option>
+              <option value="2">Compañia 02</option>              
+            </select>
+          </div>          
+          <div class="col s4">
+            <label>Sala</label>
+            <select class="browser-default">
+              <option value="" disabled selected>Elije una </option>
+            </select>
+          </div>  
+          <div class="input-field col s4">
+            <label>Fecha</label>
+            <input type="date" class="datepicker">
+          </div>          
         </div>
-      <div id="divider"></div>
-
+        <div id="divider"></div>
+        <div id="row">
+          <table class="table-bordered responsible centered">
+            <thead>
+              <tr>
+                <th data-field="nro" rowspan="2">N°</th>
+                <th data-field="fecha" rowspan="2">Fecha</th>
+                <th data-field="maquina" rowspan="2">Máquina</th>
+                <th colspan="2">Coin In</th>
+                <th colspan="2">Coin Out</th>
+                <th colspan="2">JP</th>
+                <th rowspan="2">Acciones</th>
+              </tr>
+              <tr>
+                <th>Antes</th>
+                <th>Despues</th>
+                <th>Antes</th>
+                <th>Despues</th>
+                <th>Antes</th>
+                <th>Despues</th>
+              </tr>              
+            </thead>
+            <tbody>
+              <tr>
+                <td>10</td>
+                <td>13/02/2015</td>
+                <td>Maquina Latrele</td>
+                <td>10</td>
+                <td>20</td>
+                <td>10</td>
+                <td>20</td>
+                <td>10</td>
+                <td>20</td>
+                <td>
+                  <a href="#"><i class="small mdi-content-add-circle"></i></a>
+                  <a href="#"><i class="small mdi-action-backup"></i></a>
+                </td>
+              </tr>              
+            </tbody>            
+          </table>
+        </div>        
       <div class="footer">
-        <p>♥ from the Yeoman team</p>
+        <p>♥ from the S3K team</p>
       </div>
     </div>
 
@@ -72,7 +115,7 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../bower_components/materialize/bin/materialize.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

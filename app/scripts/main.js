@@ -1,2 +1,11 @@
 /* jshint devel:true */
-console.log('\'Allo \'Allo!');
+
+$(document).ready(function() {
+
+	/*========================*\
+	 * Materialize Initiation *
+	\*========================*/
+    $('select').material_select();
+    $('.datepicker').pickadate();
+
+});
